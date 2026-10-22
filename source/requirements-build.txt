@@ -1,0 +1,3 @@
+# Runtime backend uses the Python standard library.
+# Optional Windows portable EXE build; use Python 3.14.5.
+pyinstaller==6.22.3

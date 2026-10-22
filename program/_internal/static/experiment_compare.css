@@ -1,0 +1,31 @@
+.experiment-compare { margin: 1.25rem 0; }
+.compare-panel { border: 1px solid #d9e5e4; border-radius: 14px; background: #fff; }
+.compare-panel > summary { cursor: pointer; padding: 1.1rem 1.25rem; color: #173f43; font-weight: 700; }
+.compare-panel-body { padding: 0 1.25rem 1.25rem; }
+.compare-selection { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: .8rem; align-items: end; }
+.compare-selection label { display: grid; gap: .4rem; min-width: 0; font-weight: 600; }
+.compare-selection select { width: 100%; max-width: 100%; min-height: 42px; border: 1px solid #ccdcd9; border-radius: 8px; padding: .6rem; background: #fff; color: #243e45; }
+.compare-selection button { min-height: 40px; }
+.compare-status { overflow-wrap: anywhere; color: #41676d; }
+.compare-notices { background: #f2f8f7; border-left: 3px solid #078f80; padding: .6rem 1rem; margin: 1rem 0; }
+.compare-notices p { margin: .4rem 0; line-height: 1.7; }
+.compare-sides { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1rem; }
+.compare-side { border: 1px solid #e0e9e7; border-radius: 10px; padding: .8rem 1rem; overflow-wrap: anywhere; }
+.compare-side h4 { margin: .2rem 0 .6rem; }
+.experiment-compare-result h4 { margin-top: 1.6rem; }
+.compare-table-wrap { width: 100%; overflow: auto; margin: .8rem 0; border: 1px solid #e0e9e7; border-radius: 8px; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: .88rem; text-align: left; }
+.compare-table th, .compare-table td { padding: .7rem .75rem; vertical-align: top; border-bottom: 1px solid #e3eae9; overflow-wrap: anywhere; min-width: 85px; max-width: 420px; }
+.compare-table th { background: #edf6f4; color: #214f55; white-space: nowrap; }
+.compare-table td:first-child { min-width: 150px; }
+.compare-disclosure { margin: .8rem 0; border: 1px solid #e0e9e7; border-radius: 8px; padding: .7rem .9rem; }
+.compare-disclosure summary { cursor: pointer; color: #216b6c; }
+.compare-disclosure pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 440px; overflow: auto; font-size: .8rem; }
+.compare-pager { display: flex; align-items: center; justify-content: center; gap: .8rem; flex-wrap: wrap; margin: 1rem 0; }
+.experiment-compare [hidden] { display: none !important; }
+.experiment-compare :focus-visible { outline: 3px solid #087e83; outline-offset: 3px; }
+@media (max-width: 720px) {
+  .compare-selection,.compare-sides { grid-template-columns: minmax(0,1fr); }
+  .compare-panel-body { padding: 0 .8rem .8rem; }
+  .compare-panel > summary { padding: .9rem .8rem; }
+}

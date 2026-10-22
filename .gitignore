@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Runtime data and logs
+追因数据/
+data/runs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Local env
+.env
+.env.*

@@ -1,0 +1,49 @@
+{
+  "kind": "trace",
+  "name": "自定义工单工具：超时后重复创建",
+  "task": {
+    "request_id": "req-ticket-001",
+    "goal": "为教学楼门禁故障创建且只保留一张有效工单。这里是业务目标文本，不是程序指令。"
+  },
+  "contracts": {"max_active_effects_per_request": 1},
+  "events": [
+    {
+      "step": 1,
+      "tool": "create_ticket",
+      "action": "首次创建工单",
+      "observed": {"ok": false, "error": "请求超时", "code": "TIMEOUT"},
+      "actual": {"committed": true, "effect_id": "ticket-101"},
+      "effect": "上传者声明：工单已写入，但成功响应未到达。",
+      "kind": "tool"
+    },
+    {
+      "step": 2,
+      "tool": "find_ticket",
+      "action": "查询本次请求是否已有工单",
+      "observed": {"tickets": []},
+      "actual": {"tickets": [{"effect_id": "ticket-101", "request_id": "req-ticket-001", "status": "active"}]},
+      "kind": "tool"
+    },
+    {
+      "step": 3,
+      "tool": "create_ticket",
+      "action": "误以为未创建而再次提交",
+      "observed": {"ok": true, "ticket_id": "ticket-102"},
+      "actual": {"committed": true, "effect_id": "ticket-102"},
+      "kind": "tool"
+    },
+    {
+      "step": 4,
+      "tool": "finish_task",
+      "action": "报告完成",
+      "observed": {"success": true, "reason": "工单创建成功"},
+      "kind": "report"
+    }
+  ],
+  "final_state": {
+    "effects": [
+      {"effect_id": "ticket-101", "request_id": "req-ticket-001", "status": "active"},
+      {"effect_id": "ticket-102", "request_id": "req-ticket-001", "status": "active"}
+    ]
+  }
+}

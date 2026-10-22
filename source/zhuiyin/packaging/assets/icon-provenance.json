@@ -1,0 +1,53 @@
+{
+  "approved_source": "追因-logo-方案03-ZY连接圆环-20261020.png",
+  "approved_sha256": "2526480358ea015fdc634e582633f733ea5686384a27752941c8a09b0a0953b6",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "transparent_trim_box": [
+    102,
+    119,
+    1152,
+    1144
+  ],
+  "conversion": "transparent exterior trim, symmetric padding, resampling and ICO encoding only",
+  "ico_sizes": [
+    [
+      16,
+      16
+    ],
+    [
+      20,
+      20
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      40,
+      40
+    ],
+    [
+      48,
+      48
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      256,
+      256
+    ]
+  ]
+}

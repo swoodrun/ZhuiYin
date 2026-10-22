@@ -1,0 +1,9 @@
+.product-panel{margin:16px 0;padding:16px 18px;border:1px solid var(--border,#dce5e5);border-radius:12px;background:#fff}
+.product-panel>summary{cursor:pointer;font-weight:650;color:#17464b;list-style-position:outside;margin-left:16px}
+.product-panel>div{margin-top:14px}.product-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;background:#f4f8f8;padding:12px;border-radius:8px}
+#task-template-panel{margin:0 0 22px}.product-action-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.product-retest-choices{display:grid;gap:8px;max-height:330px;overflow:auto;margin:12px 0;padding:3px}
+.product-retest-option{display:flex;align-items:flex-start;gap:10px;padding:9px;border:1px solid #e0e9e9;border-radius:7px;font-weight:400;overflow-wrap:anywhere}
+.product-retest-option input{width:18px;height:18px;flex:0 0 18px;margin:2px 0}.product-contract{margin:10px 0}
+#diagnostics-workspace{margin:20px 0}.product-history-actions{margin-bottom:24px}
+@media(max-width:720px){.product-panel{padding:12px}.product-action-row>.button{width:100%}}

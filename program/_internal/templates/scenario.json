@@ -1,0 +1,14 @@
+{
+  "kind": "scenario",
+  "name": "开发板借用：提交后响应丢失",
+  "description": "修改业务参数后上传。此类场景只运行本地设备库存规则实验；上传不能配置模型或执行代码。",
+  "config": {
+    "equipment": "实验室开发板",
+    "stock": 8,
+    "quantity": 2,
+    "request_id": "req-board-001",
+    "seed": 17,
+    "faults": ["commit_response_lost", "stale_read"],
+    "agent_mode": "rules"
+  }
+}

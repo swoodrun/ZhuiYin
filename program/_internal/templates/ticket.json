@@ -1,0 +1,14 @@
+{
+  "kind": "scenario",
+  "name": "工单创建 · 成功回执未提交",
+  "description": "比较四种策略能否识别假成功并完成一次真实工单写入。",
+  "config": {
+    "scenario": "ticket",
+    "ticket_title": "实验室打印机无法连接",
+    "ticket_priority": "high",
+    "request_id": "ticket-upload-001",
+    "seed": 17,
+    "faults": ["ack_without_commit"],
+    "agent_mode": "rules"
+  }
+}

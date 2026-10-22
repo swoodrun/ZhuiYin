@@ -1,0 +1,3 @@
+﻿业务场景,工单标题,优先级,请求编号,种子,故障
+ticket,练习：会议室投影无法开机,normal,practice-ticket-001,42,
+ticket,练习：实验室网络中断,high,practice-ticket-002,17,未提交却返回成功
